@@ -1,0 +1,13 @@
+<svg width="615" height="158" viewBox="0 0 615 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="235" y="62" width="146" height="35" fill="#252525"/>
+<rect x="182" y="158" width="158" height="44" rx="8" transform="rotate(-90 182 158)" fill="#252525"/>
+<rect x="128" y="158" width="158" height="44" rx="8" transform="rotate(-90 128 158)" fill="#252525"/>
+<rect x="75" y="158" width="158" height="44" rx="8" transform="rotate(-90 75 158)" fill="#252525"/>
+<rect x="22" y="158" width="158" height="44" rx="8" transform="rotate(-90 22 158)" fill="#252525"/>
+<rect x="549" y="158" width="158" height="44" rx="8" transform="rotate(-90 549 158)" fill="#252525"/>
+<rect x="496" y="158" width="158" height="44" rx="8" transform="rotate(-90 496 158)" fill="#252525"/>
+<rect x="443" y="158" width="158" height="44" rx="8" transform="rotate(-90 443 158)" fill="#252525"/>
+<rect x="390" y="158" width="158" height="44" rx="8" transform="rotate(-90 390 158)" fill="#252525"/>
+<path d="M602 97V58H607C611.418 58 615 61.5817 615 66V89C615 93.4183 611.418 97 607 97H602Z" fill="#252525"/>
+<path d="M8 99C3.58172 99 0 95.4183 0 91L0 68C0 63.5817 3.58172 60 8 60H13L13 99H8Z" fill="#252525"/>
+</svg>
