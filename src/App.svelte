@@ -38,7 +38,7 @@
   });
 
   function handleKeyDown(event) {
-    if (true || event.key === "Enter") {
+    if (event.key === "Enter") {
       // Ignore enter key event for testing purposes
       plates = [];
 
