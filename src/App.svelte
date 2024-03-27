@@ -108,8 +108,12 @@
 
 <style>
   :global(body) {
-    background-color: lightseagreen;
+    background-color: black;
     background-image: url("/public/images/background.png");
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
