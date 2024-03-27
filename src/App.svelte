@@ -23,7 +23,18 @@
     console.log(plates);
   }
 
-  function initLift(platesCount) {
+  function initLift() {
+    plates = [];
+
+    if (parseInt(weight, 10) > 30000) {
+      alert("El récord de levantamiento es de 488 kg.");
+      weight = "";
+      return;
+    }
+
+    const platesCount = Math.round(parseInt(weight, 10) / 25) / 2;
+    weight = "";
+
     for (let i = 0; i < platesCount; i++) {
       const lSrc = i === 0 ? PLATES.IL : PLATES.L;
       const rSrc = i === 0 ? PLATES.IR : PLATES.R;
@@ -34,31 +45,20 @@
 
   onMount(() => {
     // Cargo la vista
-    // initLift(2);
+    // initLift();
   });
 
   function handleKeyDown(event) {
     if (event.key === "Enter") {
       // Ignore enter key event for testing purposes
-      plates = [];
-
-      if (parseInt(weight, 10) > 30000) {
-        alert("El récord de levantamiento es de 488 kg.");
-        weight = "";
-        return;
-      }
-
-      console.log("Plates", Math.round(parseInt(weight, 10) / 25) / 2);
-
-      const platesCount = Math.round(parseInt(weight, 10) / 25) / 2;
-      initLift(platesCount);
-
-      weight = "";
+      initLift();
     }
   }
 </script>
 
-<div class="title">Set visualizer</div>
+<div class="top-left-image-container">
+  <img src="images/sign.png" alt="About" class="top-left-image" />
+</div>
 
 <div class="input-container">
   <input
@@ -69,6 +69,7 @@
     on:keydown={handleKeyDown}
     class="custom-input"
   />
+  <button on:click={initLift} class="lift-button">Lift</button>
 </div>
 
 <div class="guy-container">
@@ -125,19 +126,12 @@
     text-align: center;
   }
 
-  .title {
-    text-align: center;
-    font-size: 50px;
-    font-style: normal;
-    margin-bottom: 20px;
-    color: #fff;
-    text-decoration: none;
-  }
-
   .input-container {
+    position: fixed;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    top: 100px;
+    left: 0;
+    right: 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -162,7 +156,32 @@
     width: 450px;
     color: #f56514;
     text-indent: 6px;
+    border: none;
+    border-radius: 4px;
+  }
+  .lift-button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: orange;
+    color: white;
+    font-weight: normal;
   }
 
-  /* input */
+  .lift-button:hover {
+    background-color: darkorange; /* Cambia el color de fondo al pasar el ratón */
+  }
+
+  .top-left-image-container {
+    position: fixed;
+    top: 0px; /* Adjust as needed */
+    left: 50px; /* Adjust the left padding */
+    z-index: 9999; /* Adjust the z-index if needed */
+  }
+
+  .top-left-image {
+    width: 250px; /* Adjust the width of your image */
+    height: auto; /* Maintain aspect ratio */
+  }
 </style>
