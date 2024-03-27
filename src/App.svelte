@@ -41,7 +41,7 @@
     if (event.key === "Enter") {
       plates = [];
 
-      if (parseInt(weight, 10) > 100000) {
+      if (parseInt(weight, 10) > 3000) {
         alert("El récord de levantamiento es de 488 kg.");
         weight = "";
         return;
